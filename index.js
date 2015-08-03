@@ -1,9 +1,8 @@
 var fs = require(fs)
 module.exports = {
-  crawl: function() {
-    currentDir = path.join('/Users/Default','');
-    fs.readdir('/Users/Default', function (err, files) {
-  	currentDir = path.join('/Users/Default', '');
+  crawl: function(directory) {
+    currentDir = path.join(directory,'');
+    fs.readdir(currentDir, function (err, files) {
        if (err) {
           throw err;
         }
